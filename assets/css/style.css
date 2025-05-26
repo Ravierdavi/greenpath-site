@@ -1,0 +1,23 @@
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  padding-top: 70px; /* Espaço para o menu fixo */
+}
+
+section {
+  scroll-margin-top: 80px; /* Alinhamento do scroll */
+}
+
+.bg-greenpath {
+  background-color: #28a745;
+}
+
+/* Efeito suave para links do menu */
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
