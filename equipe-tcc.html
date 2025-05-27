@@ -15,19 +15,24 @@
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-success"
+      style="position: absolute; width: 100%; top: 0; z-index: 1000"
+    >
       <div class="container">
         <a class="navbar-brand" href="index.html">GreenPath</a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler gp-hamburger"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Toggle menu"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="gp-hamburger-box">
+            <span class="gp-hamburger-inner"></span>
+          </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
@@ -111,7 +116,24 @@
       </div>
     </div>
 
-    <footer class="bg-success text-white text-center py-3">
+    <footer
+      class="bg-success text-white text-center py-3"
+      style="position: absolute; width: 100%; bottom: 0"
+    >
+      <div class="py-4">
+        <p class="mb-2">Acompanhe-nos nas redes sociais:</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
       <p>GreenPath © 2025 - Projeto de TCC | Colégio Nova Geração</p>
     </footer>
 

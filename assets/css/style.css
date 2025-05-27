@@ -6,7 +6,10 @@
 }
 
 body {
+  min-height: 100vh;
+  margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
   line-height: 1.6;
   padding-top: 56px; /* Espaço para o menu fixo */
   color: #333;
@@ -30,9 +33,82 @@ body {
   font-weight: 700;
 }
 
+/* Remove o ícone padrão do Bootstrap */
+.navbar-toggler .navbar-toggler-icon {
+  display: none;
+}
+
+/* Estilo básico do botão */
+.gp-hamburger {
+  padding: 10px;
+  border: none;
+  background: transparent !important;
+  cursor: pointer;
+}
+
+/* Container do ícone */
+.gp-hamburger-box {
+  width: 24px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Linha do meio (visível por padrão) */
+.gp-hamburger-inner {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+
+/* Linhas superior e inferior (pseudo-elementos) */
+.gp-hamburger-inner::before,
+.gp-hamburger-inner::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.gp-hamburger-inner::before {
+  top: -6px;
+}
+
+.gp-hamburger-inner::after {
+  bottom: -6px;
+}
+
+/* Estado aberto (transforma em X) */
+.gp-hamburger[aria-expanded="true"] .gp-hamburger-inner {
+  background: transparent;
+}
+
+.gp-hamburger[aria-expanded="true"] .gp-hamburger-inner::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.gp-hamburger[aria-expanded="true"] .gp-hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
 /* Carrossel */
 .carousel {
   margin-top: 56px; /* Compensa o menu fixo */
+}
+
+.carousel-item {
+  text-align: center;
+  position: relative;
 }
 
 .carousel-item img {
@@ -40,10 +116,10 @@ body {
   object-fit: cover;
 }
 
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0.5rem;
-  padding: 1rem;
+.gp-carousel-caption {
+  background-color: var(--green-primary);
+  padding: 1rem 3rem;
+  color: #fff;
 }
 
 /* Cards de características */
@@ -79,7 +155,6 @@ body {
 /* QR Code */
 .qr-code-container {
   background: white;
-  margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 10px;
   display: inline-block;
@@ -121,6 +196,39 @@ footer a {
 
 footer a:hover {
   opacity: 0.8;
+}
+
+/* Estilos para as redes sociais no footer */
+.footer-social p {
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Substitui o mx-2 do Bootstrap com gap moderno */
+}
+
+.social-links a {
+  color: white !important;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.social-links i {
+  font-size: 1rem;
 }
 
 /* Media Queries para telas maiores */
