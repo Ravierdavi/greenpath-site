@@ -240,6 +240,59 @@
         </div>
       </section>
 
+      <!-- Seção: Calculadora de CO2 -->
+      <section id="calculadora" class="my-5 py-4 bg-light rounded-3">
+        <div class="container">
+          <h2 class="text-center mb-4">
+            Quantos kg de CO₂ você pode economizar?
+          </h2>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="card shadow-sm">
+                <div class="card-body p-4">
+                  <div class="mb-3">
+                    <label for="km" class="form-label"
+                      >Quilômetros percorridos por mês:</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="km"
+                      placeholder="Ex: 100"
+                      min="1"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="veiculo" class="form-label"
+                      >Tipo de veículo:</label
+                    >
+                    <select class="form-select" id="veiculo">
+                      <option value="0.2">Carro a gasolina (médio)</option>
+                      <option value="0.15">Carro a etanol</option>
+                      <option value="0.05">
+                        GreenPath (compartilhado + elétrico)
+                      </option>
+                    </select>
+                  </div>
+                  <button onclick="calcularCO2()" class="btn btn-success w-100">
+                    Calcular
+                  </button>
+                  <div
+                    id="resultado"
+                    class="mt-3 p-3 bg-success text-white rounded text-center d-none"
+                  >
+                    <!-- Resultado aparecerá aqui -->
+                  </div>
+                  <p class="text-muted mt-3 small">
+                    *Baseado em dados da ANTP (2023). Valores aproximados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Desenvolvimento -->
       <section id="desenvolvimento" class="my-5 py-3">
         <h2>4. Desenvolvimento</h2>
@@ -280,6 +333,24 @@
 
     <!-- Rodapé -->
     <footer class="bg-success text-white text-center py-3 mt-5">
+      <!-- QR Code Dinâmico-->
+      <div class="mt-4">
+        <div class="qr-code-container text-center mx-auto">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://ravierdavi.github.io/greenpath-tcc&color=28a745"
+            alt="QR Code do GreenPath"
+            class="img-fluid"
+            id="qrCode"
+          />
+          <p class="mt-2 mb-0 small text-black">Acesse pelo celular</p>
+          <button
+            onclick="atualizarQRCode()"
+            class="btn btn-sm btn-outline-dark mt-2"
+          >
+            <i class="fas fa-sync-alt"></i> Gerar novo
+          </button>
+        </div>
+      </div>
       <p>GreenPath © 2025 - Projeto de TCC | Colégio Nova Geração</p>
       <a href="equipe-tcc.html" class="text-white">Conheça a equipe</a>
     </footer>

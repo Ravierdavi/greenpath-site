@@ -67,6 +67,25 @@ body {
   color: var(--green-primary);
 }
 
+/* Calculadora */
+#calculadora {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+#resultado {
+  transition: all 0.3s ease;
+}
+
+/* QR Code */
+.qr-code-container {
+  background: white;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Seções */
 section {
   scroll-margin-top: 70px; /* Alinhamento do scroll */
