@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -15,13 +19,27 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success">
       <div class="container">
         <a class="navbar-brand" href="#">GreenPath</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="#introducao">Introdução</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#objetivos">Objetivos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#caracteristicas">Características</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#desenvolvimento">Desenvolvimento</a>
@@ -36,6 +54,52 @@
         </div>
       </div>
     </nav>
+
+    <!-- Carrossel de Imagens -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="assets/images/carousel1.jpg"
+            class="d-block w-100"
+            alt="Transporte sustentável"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mobilidade Verde</h5>
+            <p>Reduza sua pegada de carbono com nossas soluções</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/images/carousel2.jpg"
+            class="d-block w-100"
+            alt="Tecnologia"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Tecnologia Inclusiva</h5>
+            <p>Interface acessível para todos</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
 
     <!-- Seções do TCC (One-Page) -->
     <div class="container mt-5 pt-4">
@@ -93,9 +157,92 @@
         </ul>
       </section>
 
+      <!-- Características -->
+      <section id="caracteristicas" class="my-5 py-3">
+        <h2>3. Características Principais</h2>
+        <div
+          id="featuresCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <i class="fas fa-leaf feature-icon"></i>
+                      <h5 class="card-title">Frota Ecológica</h5>
+                      <p class="card-text">
+                        100% veículos elétricos ou movidos a biocombustíveis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <i class="fas fa-users feature-icon"></i>
+                      <h5 class="card-title">Compartilhamento Inteligente</h5>
+                      <p class="card-text">
+                        Agrupamento de passageiros com rotas similares.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <i class="fas fa-universal-access feature-icon"></i>
+                      <h5 class="card-title">Acessibilidade</h5>
+                      <p class="card-text">
+                        Interface adaptada para diversos públicos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <i class="fas fa-money-bill-wave feature-icon"></i>
+                      <h5 class="card-title">Pagamentos Digitais</h5>
+                      <p class="card-text">
+                        Pix, cartões e carteiras digitais.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#featuresCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#featuresCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </section>
+
       <!-- Desenvolvimento -->
       <section id="desenvolvimento" class="my-5 py-3">
-        <h2>3. Desenvolvimento</h2>
+        <h2>4. Desenvolvimento</h2>
         <p>
           O GreenPath foi idealizado com base em pesquisas bibliográficas e
           modelos como Via (EUA) e BlaBlaCar (Europa). Seus diferenciais
@@ -105,6 +252,8 @@
           <li>Frota 100% ecológica (elétricos ou biocombustíveis).</li>
           <li>Agrupamento inteligente de passageiros.</li>
           <li>Pagamentos digitais (Pix e cartão).</li>
+          <li>Interface acessível e inclusiva.</li>
+          <li>Tarifas justas e incentivos ecológicos.</li>
         </ul>
         <figure class="text-center">
           <img
@@ -119,7 +268,7 @@
 
       <!-- Conclusão -->
       <section id="conclusao" class="my-5 py-3">
-        <h2>4. Conclusão</h2>
+        <h2>5. Conclusão</h2>
         <p>
           O GreenPath representa uma proposta inovadora de transporte urbano
           sustentável, com forte apelo ecológico, social e tecnológico. Embora
