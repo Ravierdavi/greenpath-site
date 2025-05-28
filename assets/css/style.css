@@ -102,6 +102,10 @@ body {
 }
 
 /* Carrossel */
+#mainCarousel {
+  background-color: var(--green-primary);
+}
+
 .carousel {
   margin-top: 56px; /* Compensa o menu fixo */
 }
@@ -113,11 +117,11 @@ body {
 
 .carousel-item img {
   max-height: 60vh;
+  max-width: 1280px;
   object-fit: cover;
 }
 
 .gp-carousel-caption {
-  background-color: var(--green-primary);
   padding: 1rem 3rem;
   color: #fff;
 }
@@ -210,7 +214,7 @@ footer a:hover {
 }
 
 .social-links a {
-  color: white !important;
+  color: white;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -229,6 +233,18 @@ footer a:hover {
 
 .social-links i {
   font-size: 1rem;
+}
+
+/* Estilos para imagens */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+figure {
+  margin: 2rem 0 0 0;
 }
 
 /* Media Queries para telas maiores */
@@ -255,7 +271,7 @@ footer a:hover {
     padding: 3rem 0;
   }
 
-  .carousel-caption {
-    bottom: 5rem;
+  #mainCarousel {
+    padding-top: 2rem;
   }
 }
