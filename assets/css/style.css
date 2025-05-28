@@ -188,6 +188,32 @@ h2::after {
   background-color: var(--green-primary);
 }
 
+/* Seção de Download */
+#download {
+  background-color: rgba(40, 167, 69, 0.05);
+}
+
+#download .card {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#download .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#download .btn-download {
+  background-color: var(--green-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+#download .btn-download:hover {
+  background-color: var(--green-dark);
+}
+
 /* Rodapé */
 footer {
   background-color: var(--green-primary);
